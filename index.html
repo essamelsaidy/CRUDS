@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRADS</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    l
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="form-floating mb-3">
+        <input
+        oninput="validInputs(this)"
+          type="text"
+          class="form-control"
+          id="productName"
+          placeholder=""
+        />
+        <div class="alert alert-danger py-2 mt-2 d-none" >
+          Name should start with capital char then 2-10 chars
+        </div>
+        <label for="productName">Product Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        oninput="validInputs(this)"
+          type="number"
+          class="form-control"
+          id="productPrice"
+          placeholder=""
+        />
+        <div class="alert alert-danger py-2 mt-2 d-none" >
+          Price must be between 10 - 999999 EGP
+        </div>
+        <label for="productPrice">Prouduct Price</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+        oninput="validInputs(this)"
+          type="text"
+          class="form-control"
+          id="productCatigory"
+          placeholder=""
+        />
+        <div class="alert alert-danger py-2 mt-2 d-none" >
+          Catigory should be one of ==> (Mopile | TV | Screen | Labtop)
+        </div>
+        <label for="productCatigory">Product Catigory</label>
+      </div>
+      <div class="form-floating mb-3">
+        <textarea
+        oninput="validInputs(this)"
+          type="text"
+          class="form-control"
+          id="productDisc"
+          placeholder=""
+        ></textarea>
+        <div class="alert alert-danger py-2 mt-2 d-none" >
+          Discription min length is 3 chars
+        </div>
+        <label for="productDisc">Product Discription</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="file"
+          class="form-control"
+          id="productImage"
+          placeholder=""
+        />
+        <label for="productImage">Upload Prouduct Image</label>
+      </div>
+      <button id="add" onclick="addProduct()" class="btn btn-outline-primary btn-lg">
+        Add Product
+      </button>
+      <button id="update" onclick="update()" class="btn btn-warning btn-lg text-light d-none">
+        update Product
+      </button>
+    
+      <input oninput="search()" id="search" type="search" placeholder="search......" class="form-control my-3 w-75 m-auto" />
+    </div>
+    <div class="container pb-3">
+      <div class="row g-3" id="myRow"></div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
